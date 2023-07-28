@@ -45,7 +45,7 @@ uint8_t read(uint8_t virtualReg)
         }
     }
 
-    HAL_I2C_Mem_Write(&hi2c2, AS726x_WRITE_ADDRESS, AS726X_SLAVE_WRITE_REG, 1, virtualReg, 1, 1000);
+    HAL_I2C_Mem_Write(&hi2c2, AS726x_WRITE_ADDRESS, AS726X_SLAVE_WRITE_REG, 1, &virtualReg, 1, 1000);
 
     while (1)
     {
